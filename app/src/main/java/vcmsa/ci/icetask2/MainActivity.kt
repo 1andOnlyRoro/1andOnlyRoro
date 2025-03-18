@@ -33,12 +33,12 @@ class MainActivity : AppCompatActivity() {
             val weight = weight.text.toString().toDouble()
             val height = height.text.toString().toDouble()
 
-             bmiAnswer = weight / (height * height)
-             when(bmi.text.toString().toDouble()){
-                 in 0.0 .. 18.5->bmi.text = "UnderWeight"
-                 in 18.6 .. 24.9->bmi.text = "Healthy Weight"
-                 in 25.0 .. 29.9->bmi.text = "OverWeight"
-                 in 30.0 .. 70.9->bmi.text = "Obses"
+             bmiAnswer = weight/(height * height)
+             when(bmiAnswer){
+                 in 0.0 .. 18.5 ->bmi.text = "UnderWeight"
+                 in 18.6 .. 24.9 ->bmi.text = "Healthy Weight"
+                 in 25.0 .. 29.9 ->bmi.text = "OverWeight"
+                 in 30.0 .. 70.9 ->bmi.text = "Obses"
              }
 
 
